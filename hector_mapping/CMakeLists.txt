@@ -30,7 +30,18 @@ find_package(Eigen3 REQUIRED)
 
 add_executable(hector_mapping_node src/main.cpp src/HectorMappingRos.cpp src/PoseInfoContainer.cpp)
 include_directories("include/hector_slam_lib/")
-ament_target_dependencies(hector_mapping_node rclcpp Boost tf2 tf2_ros sensor_msgs hector_nav_msgs std_srvs laser_geometry visualization_msgs pcl_conversions)
+# ament_target_dependencies(hector_mapping_node rclcpp Boost tf2 tf2_ros sensor_msgs hector_nav_msgs std_srvs laser_geometry visualization_msgs pcl_conversions)
+ament_target_dependencies(hector_mapping_node
+  rclcpp
+  Boost
+  tf2
+  tf2_ros
+  sensor_msgs
+  hector_nav_msgs
+  std_srvs
+  laser_geometry
+  visualization_msgs
+)
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
