@@ -2,26 +2,26 @@ cmake_minimum_required(VERSION 3.8)
 project(hector_lightweight_map_transport)
 
 find_package(ament_cmake REQUIRED)
-find_package(ament_cmake_python REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
-set(msg_files
-  "hector_lightweight_map_transport/msg/CompressedMap.msg"
+add_executable(lightweight_map_transport_node
+  src/lightweight_map_transport_node.cpp
 )
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
+ament_target_dependencies(lightweight_map_transport_node
+  rclcpp
+  nav_msgs
+  sensor_msgs
+  std_msgs
 )
 
-ament_export_dependencies(rosidl_default_runtime)
-
-ament_python_install_package(${PROJECT_NAME})
-
-install(
-  PROGRAMS
-    hector_lightweight_map_transport/nodes/map_compressor.py
-    hector_lightweight_map_transport/nodes/map_decompressor.py
+install(TARGETS
+  lightweight_map_transport_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
+
