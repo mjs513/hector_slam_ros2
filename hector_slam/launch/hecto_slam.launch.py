@@ -25,10 +25,4 @@ def generate_launch_description():
                 {"pub_map_odom_transform": True},
             ],
         ),
-        Node(
-            package="hector_trajectory_server",
-            executable="hector_trajectory_server",
-            name="hector_trajectory_server",
-            output="screen",
-        ),
     ])
