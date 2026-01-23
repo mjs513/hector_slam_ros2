@@ -6,12 +6,4 @@ find_package(rclpy REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
-# Install Python nodes
-install(
-  PROGRAMS
-    scripts/map_compressor
-    scripts/map_decompressor
-  DESTINATION lib/${PROJECT_NAME}
-)
-
 ament_package()
