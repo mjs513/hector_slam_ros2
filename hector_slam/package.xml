@@ -1,17 +1,25 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>hector_slam</name>
-  <version>0.5.0</version>
-  <description>Meta package and launch files for Hector SLAM.</description>
+  <version>0.1.0</version>
+  <description>Meta-package for the Hector SLAM system.</description>
 
-  <maintainer email="CyberMerln@gmail.com">Michael</maintainer>
+  <maintainer email="you@example.com">Michael</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>hector_mapping</depend>
-  <depend>hector_trajectory_server</depend>
-  <depend>hector_nav_msgs</depend>
+  <!-- Core SLAM components -->
+  <exec_depend>hector_mapping</exec_depend>
+  <exec_depend>hector_nav_msgs</exec_depend>
+  <exec_depend>hector_imu_tools</exec_depend>
+  <exec_depend>hector_imu_attitude_to_tf</exec_depend>
+  <exec_depend>hector_lightweight_map_transport</exec_depend>
+  <exec_depend>hector_map_tools</exec_depend>
+  <exec_depend>hector_trajectory_server</exec_depend>
+
+  <!-- Launch -->
+  <exec_depend>ros2launch</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

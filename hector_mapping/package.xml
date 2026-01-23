@@ -1,46 +1,30 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>hector_mapping</name>
-  <version>0.5.0</version>
-  <description>Hector SLAM mapping node.</description>
+  <version>0.1.0</version>
+  <description>Hector SLAM mapping node for 2D LIDAR-based SLAM.</description>
 
-  <maintainer email="CyberMerln@gmail.com">Michael</maintainer>
+  <maintainer email="you@example.com">Michael</maintainer>
   <license>BSD</license>
 
+  <!-- Build tools -->
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
-  <build_depend>rclcpp</build_depend>
-  <exec_depend>rclcpp</exec_depend>
+  <!-- Runtime dependencies -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
 
-  <build_depend>sensor_msgs</build_depend>
-  <exec_depend>sensor_msgs</exec_depend>
+  <!-- Core dependencies -->
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>eigen3_cmake_module</depend>
 
-  <build_depend>geometry_msgs</build_depend>
-  <exec_depend>geometry_msgs</exec_depend>
-
-  <build_depend>nav_msgs</build_depend>
-  <exec_depend>nav_msgs</exec_depend>
-
-  <build_depend>std_msgs</build_depend>
-  <exec_depend>std_msgs</exec_depend>
-
-  <build_depend>std_srvs</build_depend>
-  <exec_depend>std_srvs</exec_depend>
-
-  <build_depend>tf2</build_depend>
-  <exec_depend>tf2</exec_depend>
-
-  <build_depend>tf2_ros</build_depend>
-  <exec_depend>tf2_ros</exec_depend>
-
-  <build_depend>tf2_geometry_msgs</build_depend>
-  <exec_depend>tf2_geometry_msgs</exec_depend>
-
-  <build_depend>hector_nav_msgs</build_depend>
-  <exec_depend>hector_nav_msgs</exec_depend>
-
-  <build_depend>eigen3_cmake_module</build_depend>
-  <exec_depend>eigen3_cmake_module</exec_depend>
+  <!-- Launch -->
+  <exec_depend>ros2launch</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

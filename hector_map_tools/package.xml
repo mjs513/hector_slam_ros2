@@ -1,32 +1,15 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>hector_imu_tools</name>
-  <version>0.5.0</version>
-  <description>IMU utilities for Hector SLAM.</description>
+  <name>hector_map_tools</name>
+  <version>0.1.0</version>
+  <description>Header-only map utility functions for Hector SLAM.</description>
 
-  <maintainer email="CyberMerln@gmail.com">Michael</maintainer>
+  <maintainer email="you@example.com">Michael</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <build_depend>rclcpp</build_depend>
-  <exec_depend>rclcpp</exec_depend>
-
-  <build_depend>sensor_msgs</build_depend>
-  <exec_depend>sensor_msgs</exec_depend>
-
-  <build_depend>geometry_msgs</build_depend>
-  <exec_depend>geometry_msgs</exec_depend>
-
-  <build_depend>nav_msgs</build_depend>
-  <exec_depend>nav_msgs</exec_depend>
-
-  <build_depend>tf2</build_depend>
-  <exec_depend>tf2</exec_depend>
-
-  <build_depend>tf2_ros</build_depend>
-  <exec_depend>tf2_ros</exec_depend>
-
+  <!-- No runtime dependencies; header-only -->
   <export>
     <build_type>ament_cmake</build_type>
   </export>

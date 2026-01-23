@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>hector_trajectory_server</name>
-  <version>0.5.0</version>
-  <description>Trajectory server for Hector SLAM.</description>
+  <version>0.1.0</version>
+  <description>Trajectory server for Hector SLAM, providing robot path tracking.</description>
 
-  <maintainer email="CyberMerln@gmail.com">Michael</maintainer>
+  <maintainer email="you@example.com">Michael</maintainer>
   <license>BSD</license>
 
+  <!-- Build system -->
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <!-- Dependencies -->
   <depend>rclcpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
   <depend>tf2</depend>
   <depend>tf2_ros</depend>
-  <depend>tf2_geometry_msgs</depend>
-  <depend>geometry_msgs</depend>
-  <depend>nav_msgs</depend>
-  <depend>hector_nav_msgs</depend>
 
   <export>
     <build_type>ament_cmake</build_type>
