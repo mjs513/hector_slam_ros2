@@ -5,7 +5,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package="hector_mapping",
-            executable="hector_mapping",
+            executable="hector_mapping_node",   # ← FIXED
             name="hector_mapping",
             output="screen",
             parameters=[
