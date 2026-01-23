@@ -1,26 +1,32 @@
 cmake_minimum_required(VERSION 3.8)
-project(hector_map_tools)
-
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
+project(hector_imu_tools)
 
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
-find_package(Eigen3 REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
 
-#############
-## Install ##
-#############
+include_directories(include)
 
-# all install targets should use catkin DESTINATION variables
-# See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
-
-install(DIRECTORY include/${PROJECT_NAME}/
-  DESTINATION include/${PROJECT_NAME}
-  FILES_MATCHING PATTERN "*.h"
-  PATTERN ".svn" EXCLUDE
+add_executable(pose_and_orientation_to_imu_node
+  src/pose_and_orientation_to_imu_node.cpp
 )
-ament_export_include_directories(include)
+
+ament_target_dependencies(pose_and_orientation_to_imu_node
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  nav_msgs
+  tf2
+  tf2_ros
+)
+
+install(TARGETS
+  pose_and_orientation_to_imu_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()
