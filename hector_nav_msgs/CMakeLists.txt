@@ -3,13 +3,11 @@ project(hector_nav_msgs)
 
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
-# Only include this if you actually have .msg files
-# rosidl_generate_interfaces(${PROJECT_NAME}
-#   "msg/Trajectory.msg"
-# )
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/ResetMapping.srv"
+)
 
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()
-
-
