@@ -10,7 +10,7 @@ find_package(tf2_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 add_executable(hector_mapping_node
-  src/hector_mapping_node.cpp
+  src/hector_mapping_node_main.cpp
   src/HectorMappingRos.cpp
 )
 
