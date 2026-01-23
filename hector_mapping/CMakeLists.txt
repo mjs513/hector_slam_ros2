@@ -12,7 +12,7 @@ find_package(geometry_msgs REQUIRED)
 add_executable(hector_mapping_node
   src/main.cpp
   src/HectorMappingRos.cpp
-  src/HectorDebugInfoProvider.cpp
+  src/PoseInfoContainer.cpp
 )
 
 ament_target_dependencies(hector_mapping_node
