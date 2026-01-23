@@ -12,7 +12,6 @@ find_package(geometry_msgs REQUIRED)
 add_executable(hector_mapping_node
   src/main.cpp
   src/HectorMappingRos.cpp
-  src/HectorDrawings.cpp
   src/HectorDebugInfoProvider.cpp
 )
 
