@@ -11,7 +11,6 @@ find_package(geometry_msgs REQUIRED)
 find_package(hector_nav_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(std_srvs REQUIRED)
-find_package(laser_geometry REQUIRED)
 
 include_directories(
   ${EIGEN3_INCLUDE_DIRS}
@@ -32,7 +31,6 @@ ament_target_dependencies(hector_mapping_node
   geometry_msgs
   hector_nav_msgs
 	std_srvs
-	laser_geometry
   Eigen3
 )
 

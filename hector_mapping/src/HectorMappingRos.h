@@ -44,7 +44,7 @@
 #include "std_srvs/srv/set_bool.hpp"
 #include "std_srvs/srv/trigger.hpp"
 
-#include "laser_geometry/laser_geometry.hpp"
+// #include "laser_geometry/laser_geometry.hpp"
 #include "nav_msgs/srv/get_map.hpp"
 
 #include "slam_main/HectorSlamProcessor.h"
