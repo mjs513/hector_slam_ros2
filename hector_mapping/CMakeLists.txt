@@ -8,6 +8,12 @@ find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(hector_nav_msgs REQUIRED)
+find_package(Eigen3 REQUIRED)
+
+include_directories(
+  ${EIGEN3_INCLUDE_DIRS}
+)
 
 add_executable(hector_mapping_node
   src/main.cpp
@@ -22,6 +28,8 @@ ament_target_dependencies(hector_mapping_node
   tf2
   tf2_ros
   geometry_msgs
+  hector_nav_msgs
+  Eigen3
 )
 
 install(TARGETS hector_mapping_node

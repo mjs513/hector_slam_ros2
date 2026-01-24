@@ -7,18 +7,14 @@
   <maintainer email="you@example.com">Michael</maintainer>
   <license>BSD</license>
 
-  <!-- Build tools -->
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
-  <!-- Runtime -->
-  <exec_depend>rosidl_default_runtime</exec_depend>
-
-  <!-- Dependencies for message fields -->
   <depend>geometry_msgs</depend>
   <depend>nav_msgs</depend>
 
-  <!-- REQUIRED for any package that installs .msg/.srv -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
   <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
